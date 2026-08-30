@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api/agent/chat";
+const API_URL = "https://skylark-bi-agent-9jvn.onrender.com/api/agent/chat";
 
 const welcome = document.getElementById("welcome");
 const chat = document.getElementById("chat");
