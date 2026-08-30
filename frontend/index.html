@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Skylark BI Agent</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="brand">
+            <div class="brand-mark">
+                S
+            </div>
+
+            <div>
+                <h1>Skylark BI Agent</h1>
+                <p>Business intelligence for leadership decisions</p>
+            </div>
+        </div>
+
+        <div class="connection-status">
+            <span class="status-dot"></span>
+            <span>Connected</span>
+        </div>
+
+    </header>
+
+
+    <!-- Main Chat Area -->
+    <main class="main">
+
+        <!-- Welcome State -->
+        <section
+            class="welcome"
+            id="welcome"
+        >
+
+            <div class="welcome-icon">
+                ✦
+            </div>
+
+            <h2>
+                Ask your business a question.
+            </h2>
+
+            <p>
+                Get answers about sales pipeline, deals,
+                work orders, collections, and sector performance.
+            </p>
+
+
+            <!-- Suggested Questions -->
+            <div class="suggestions">
+
+                <button
+                    class="suggestion"
+                    data-question="What is our total pipeline?"
+                >
+                    <span>Pipeline</span>
+                    <small>What is our total pipeline?</small>
+                </button>
+
+                <button
+                    class="suggestion"
+                    data-question="How much open pipeline do we have in Mining?"
+                >
+                    <span>Sector pipeline</span>
+                    <small>How much open pipeline do we have in Mining?</small>
+                </button>
+
+                <button
+                    class="suggestion"
+                    data-question="How much have we collected from Mining work orders?"
+                >
+                    <span>Collections</span>
+                    <small>How much have we collected from Mining work orders?</small>
+                </button>
+
+                <button
+                    class="suggestion"
+                    data-question="Compare the Mining pipeline with the amount collected from Mining work orders."
+                >
+                    <span>Compare</span>
+                    <small>Compare Mining pipeline and collections</small>
+                </button>
+
+                <button
+                    class="suggestion"
+                    data-question="Prepare a concise leadership update covering pipeline, work orders, collections, and key business observations."
+                >
+                    <span>Leadership update</span>
+                    <small>Prepare a leadership update for the business</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Chat Messages -->
+        <section
+            class="chat"
+            id="chat"
+        ></section>
+
+
+        <!-- Loading Indicator -->
+        <div
+            class="loading hidden"
+            id="loading"
+        >
+            <div class="loading-avatar">S</div>
+
+            <div class="loading-content">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Input Area -->
+    <footer class="input-area">
+
+        <div class="input-wrapper">
+
+            <textarea
+                id="message-input"
+                rows="1"
+                placeholder="Ask a business question..."
+                aria-label="Business question"
+            ></textarea>
+
+            <button
+                id="send-button"
+                aria-label="Send message"
+            >
+                ➤
+            </button>
+
+        </div>
+
+        <p class="input-hint">
+            Ask about deals, pipeline, work orders, collections, or sectors.
+        </p>
+
+    </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
